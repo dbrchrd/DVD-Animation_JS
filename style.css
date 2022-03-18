@@ -9,3 +9,10 @@
   height: 100vh;
   background-color: #000;
 }
+
+.dvd {
+  position: absolute;
+  background-color: #FFF;
+  width: 100px;
+  height: 100px;
+}
