@@ -8,6 +8,22 @@ let ky = "+";
 let celerity = 3;
 
 let interval = setInterval(() => {
+  if (kx === "+") {
+    dvd.style.left = ix + "px";
+    ix += celerity;
+  }
+  if (kx === "-") {
+    dvd.style.left = ix + "px";
+    ix -= celerity;
+  }
+  if (ky === "+") {
+    dvd.style.top = iy + "px";
+    iy += celerity;
+  }
+  if (ky === "-") {
+    dvd.style.top = iy + "px";
+    iy -= celerity;
+  }
   if (dvd.offsetLeft + dvd.offsetWidth >= main.offsetWidth) {
     kx = "-";
   }
