@@ -12,16 +12,8 @@ let interval = setInterval(() => {
   (kx === "-") ? (dvd.style.left = ix + "px", ix -= celerity) : null;
   (ky === "+") ? (dvd.style.top = iy + "px", iy += celerity) : null;
   (ky === "-") ? (dvd.style.top = iy + "px", iy -= celerity) : null;
-  if (dvd.offsetLeft + dvd.offsetWidth >= main.offsetWidth) {
-    kx = "-";
-  }
-  if (dvd.offsetLeft - dvd.offsetWidth <= -dvd.offsetWidth) {
-    kx = "+";
-  }
-  if (dvd.offsetTop + dvd.offsetHeight >= main.offsetHeight) {
-    ky = "-";
-  }
-  if (dvd.offsetTop - dvd.offsetHeight <= -dvd.offsetHeight) {
-    ky = "+";
-  }
+  (dvd.offsetLeft + dvd.offsetWidth >= main.offsetWidth) ? kx = "-" : null;
+  (dvd.offsetLeft - dvd.offsetWidth <= -dvd.offsetWidth) ? kx = "+" : null;
+  (dvd.offsetTop + dvd.offsetHeight >= main.offsetHeight) ?  ky = "-" : null;
+  (dvd.offsetTop - dvd.offsetHeight <= -dvd.offsetHeight) ?  ky = "+" : null;
 }, 1); 
