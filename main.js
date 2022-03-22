@@ -8,22 +8,10 @@ let ky = "+";
 let celerity = 3;
 
 let interval = setInterval(() => {
-  if (kx === "+") {
-    dvd.style.left = ix + "px";
-    ix += celerity;
-  }
-  if (kx === "-") {
-    dvd.style.left = ix + "px";
-    ix -= celerity;
-  }
-  if (ky === "+") {
-    dvd.style.top = iy + "px";
-    iy += celerity;
-  }
-  if (ky === "-") {
-    dvd.style.top = iy + "px";
-    iy -= celerity;
-  }
+  (kx === "+") ? (dvd.style.left = ix + "px", ix += celerity) : null;
+  (kx === "-") ? (dvd.style.left = ix + "px", ix -= celerity) : null;
+  (ky === "+") ? (dvd.style.top = iy + "px", iy += celerity) : null;
+  (ky === "-") ? (dvd.style.top = iy + "px", iy -= celerity) : null;
   if (dvd.offsetLeft + dvd.offsetWidth >= main.offsetWidth) {
     kx = "-";
   }
@@ -36,4 +24,4 @@ let interval = setInterval(() => {
   if (dvd.offsetTop - dvd.offsetHeight <= -dvd.offsetHeight) {
     ky = "+";
   }
-}, 10); 
+}, 1); 
