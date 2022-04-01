@@ -1,11 +1,11 @@
 const main = document.querySelector(".main");
 const dvd = document.querySelector(".dvd");
 
-let ix = 0;
-let iy = 0;
-let kx = "+";
-let ky = "+";
-let celerity = 3;
+let ix = 0; // Init. variables
+let iy = 0; // Init. variables
+let kx = "+"; // Init. variables
+let ky = "+"; // Init. variables
+let celerity = 3; // Init. variables
 
 let interval = setInterval(() => {
   (kx === "+") ? (dvd.style.left = ix + "px", ix += celerity) : null;
